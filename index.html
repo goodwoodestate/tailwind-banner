@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,25 +8,40 @@
     <link href="/dist/output.css" rel="stylesheet">
     <title>Goodwood banner</title>
 </head>
+
 <body>
-    <section class="main-section bg-[#232323] flex h-[68px] flex-wrap justify-between items-center text-white w-full">
-        <svg class="hidden close-button" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="9.25714" cy="9" rx="9.25714" ry="9" fill="#D3B156"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.35757 8.43063L5.57882 4.75684L4.89307 5.42354L8.67182 9.09733L4.89307 12.7711L5.57882 13.4378L9.35757 9.76403L13.1221 13.4239L13.8078 12.7572L10.0433 9.09733L13.8078 5.43742L13.1221 4.77071L9.35757 8.43063Z" fill="#0D0E12"/>
-            </svg>
+    <section id="gw-75-banner__container"
+        class="main-section bg-[#232323] flex h-[68px] flex-wrap justify-between items-center text-white w-full">
+        <svg class="hidden close-button" id="close-button__click" width="19" height="18" viewBox="0 0 19 18" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="9.25714" cy="9" rx="9.25714" ry="9" fill="#D3B156" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M9.35757 8.43063L5.57882 4.75684L4.89307 5.42354L8.67182 9.09733L4.89307 12.7711L5.57882 13.4378L9.35757 9.76403L13.1221 13.4239L13.8078 12.7572L10.0433 9.09733L13.8078 5.43742L13.1221 4.77071L9.35757 8.43063Z"
+                fill="#0D0E12" />
+        </svg>
         <div class="flex items-center ml-28 image-container">
             <img class="h-11 ml-4 desktop mr-4" src="./imgs/Goodwood75_logo.png">
             <img class="h-8 mr-4" id="gw75-logo__text" src="./imgs/Goodwood-75__text.png">
             <div class="desktop text-lg ml-6">Exploring the best motorsport moments at Goodwood since 1948.</div>
             <div class="hidden mobile-text">Exploring the best motorsport moments.</div>
         </div>
-        <div class="h-[34px] flex flex-wrap items-center justify-center flex-nowrap mr-28 w-[95px] bg-[#D3B156] button">
-            <a class="w-full flex items-center text-xs text-black uppercase text-center font-medium justify-center">Explore <svg class="ml-1" width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.49988 2H8.99988V8.5" stroke="#0D0E12"/>
-                <path d="M8.99988 2L0.999878 10" stroke="#0D0E12"/>
-                </svg>
-                </a>
-        </div>
+        <a target="_blank" href="https://www.goodwood.com/motorsport/goodwood-75/"
+            class="h-[34px] flex items-center justify-center flex-nowrap mr-28 w-[95px] bg-[#D3B156] button">Explore
+            <svg class="ml-1" width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.49988 2H8.99988V8.5" stroke="#ffffff" />
+                <path d="M8.99988 2L0.999878 10" stroke="#ffffff" />
+            </svg>
+        </a>
     </section>
+    <script type="text/javascript">
+        const closeButton = document.getElementById('close-button__click');
+        const messageContainer = document.getElementById('gw-75-banner__container');
+        closeButton.addEventListener('click', hideBanner)
+
+        function hideBanner() {
+            messageContainer.style.display = 'none'
+        }
+    </script>
 </body>
+
 </html>
